@@ -53,10 +53,9 @@ This is the playbook's immune system. It only works if the record is honest and 
 
 ## Registry
 
-### NS-0001 — Manus context compaction: reasoning history lost
-
+### NS-0001 — Context compaction
 **Date:** April 2026
-**Project:** Manus website development (Paul Poulose)
+**Project:** [anonymous]
 **Severity:** Medium
 **Status:** Addressed — CHANGELOG.md rule added
 
@@ -77,10 +76,10 @@ If reasoning is not written down before the session ends, it does not exist. Con
 
 ---
 
-### NS-0002 — Manus pre-edit state assumed: stale string left behind
+### NS-0002 — Pre-edit state assumed
 
 **Date:** April 2026
-**Project:** Manus website development (Paul Poulose)
+**Project:** [anonymous]
 **Severity:** Medium
 **Status:** Addressed — Pre-Change Verification Protocol added
 
@@ -101,10 +100,10 @@ Never edit based on what you think a file contains. Read the file. Verify the ex
 
 ---
 
-### NS-0003 — Manus structured checkpoint missing: version history unusable
+### NS-0003 — Structured checkpoint missing
 
 **Date:** April 2026
-**Project:** Manus website development (Paul Poulose)
+**Project:** [anonymous]
 **Severity:** Low
 **Status:** Addressed — Structured Checkpoint Format added
 
@@ -125,10 +124,10 @@ A checkpoint message that takes 20 minutes to search is not a checkpoint message
 
 ---
 
-### NS-0004 — Make.com migration avoided: tool evaluation done too early
+### NS-0004 — Tool migration avoided
 
 **Date:** April 2026
-**Project:** Sathia (Paul Poulose)
+**Project:** [anonymous]
 **Severity:** Low
 **Status:** Addressed — Stack evaluation checkpoint added to session-start audit for Phase 0
 
@@ -149,15 +148,15 @@ Tool recommendations in a fast-moving AI ecosystem can be outdated within weeks.
 
 ---
 
-### NS-0005 — Context file too long: CoWork context window consumed before work begins
+### NS-0005 — Context file too long
 
 **Date:** April 2026
-**Project:** Sathia (Paul Poulose)
+**Project:** [anonymous]
 **Severity:** Low
 **Status:** Addressed — 400-word limit added to template guidelines
 
 ### What Happened
-The MEMORY.md file in the Sathia CoWork project was 554 words. During sessions where this file was read alongside START-HERE.md and INSTRUCTIONS.md, a significant portion of the context window was consumed before any task-specific content was loaded. Sessions started with less available context for actual work.
+The MEMORY.md file in the contributing project's CoWork setup was 554 words. During sessions where this file was read alongside START-HERE.md and INSTRUCTIONS.md, a significant portion of the context window was consumed before any task-specific content was loaded. Sessions started with less available context for actual work.
 
 ### Root Cause
 No word limit was specified for CONTEXT/ files in the original playbook templates. Files grew naturally as more context was added.
@@ -178,7 +177,7 @@ Context files are not documentation. They are calibration. The shorter and more 
 ### NS-SEC-0001 — Prompt injection via PROCESS_IMPROVEMENTS.md (theoretical)
 
 **Date:** April 2026
-**Project:** Playbook design (Paul Poulose)
+**Project:** Playbook design
 **Severity:** High (theoretical — not yet observed in the wild)
 **Status:** Addressed — PROCESS_IMPROVEMENTS.md instruction clarification added
 
