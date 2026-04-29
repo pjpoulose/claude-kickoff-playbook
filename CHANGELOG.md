@@ -4,7 +4,7 @@
 
 ---
 
-## Version 1.0 — April 2026
+## Version 1.1 — April 2026
 
 **What is new:** Initial release. All content.
 
