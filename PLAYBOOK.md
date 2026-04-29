@@ -1,5 +1,5 @@
 # Claude Project Kick-off Playbook — Complete Reference
-**Version:** 1.0 | **April 2026**
+**Version:** 1.1 | **April 2026**
 **Source of truth for all projects using this framework**
 
 ---
@@ -375,7 +375,7 @@ Any project uses the playbook by:
 ### How Multiple Projects Feed One Playbook
 
 ```
-Project A (Sathia) ─────────────────────────────────┐
+Project A  ─────────────────────────────────┐
   └─ identifies improvement in PROCESS_IMPROVEMENTS.md │
                                                        ↓
 Project B (another project) ─────────────────────────→ PR to
@@ -507,5 +507,5 @@ THE THREE THINGS THAT MUST NEVER HAPPEN:
 
 ---
 
-*This playbook is version 1.0. The best version is always the next one.*
+*This playbook is version 1.1. The best version is always the next one.*
 *Submit improvements to: [your GitHub repo URL]*
