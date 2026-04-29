@@ -1,6 +1,12 @@
-# SATHIA — AI-Assisted Development Process Playbook
+---
+> **TEMPLATE NOTE:** This file contains placeholders in `[SQUARE BRACKETS]`.
+> Replace every placeholder with your project-specific values before use.
+> Search for `[` to find all placeholders that need filling in.
+---
+
+# [PROJECT NAME] — AI-Assisted Development Process Playbook
 **Version:** 1.0 | **Adapted from:** Manus AI-Assisted Development Process Playbook
-**Scope:** All AI-assisted development, configuration, and content work on Sathia
+**Scope:** All AI-assisted development, configuration, and content work on [PROJECT NAME]
 
 ---
 
@@ -21,16 +27,16 @@ This playbook eliminates all three by making verification mandatory, memory pers
 
 Before modifying anything — a workflow, a database table, a file, a config value — read the current state first. Never act on what you think it contains.
 
-**For n8n workflows:**
+**For [ORCHESTRATION TOOL] workflows:**
 ```
 Claude Desktop: "Show me the current state of the [workflow name] workflow"
-→ n8n-workflow-builder MCP returns the full workflow JSON
+→ [ORCHESTRATION TOOL]-workflow-builder MCP returns the full workflow JSON
 → Confirm the structure before describing any changes
 ```
 
-**For Supabase tables/schema:**
+**For [DATABASE TOOL] tables/schema:**
 ```
-Supabase Dashboard → Table Editor → read current columns and row-level security rules
+[DATABASE TOOL] Dashboard → Table Editor → read current columns and row-level security rules
 → Never assume a column exists — verify it
 ```
 
@@ -42,7 +48,7 @@ Never edit based on a paraphrase or approximation of what the file contains
 
 **For environment variables:**
 ```
-Railway Dashboard → Variables → read current values
+[HOSTING PLATFORM] Dashboard → Variables → read current values
 Never assume a variable is set — confirm it in the dashboard before building a workflow that depends on it
 ```
 
@@ -56,12 +62,12 @@ Every change has two verification moments: before (confirm the target state exis
 
 | Context | Before the change | After the change |
 |---|---|---|
-| n8n workflow node | Read current node config via MCP | Execute test run → verify output matches expected |
-| n8n workflow addition | Confirm the workflow runs cleanly without the new node | Activate → trigger manually → inspect execution log |
-| Supabase schema change | Read current table structure | Run a test query → confirm column/row returns correctly |
+| [ORCHESTRATION TOOL] workflow node | Read current node config via MCP | Execute test run → verify output matches expected |
+| [ORCHESTRATION TOOL] workflow addition | Confirm the workflow runs cleanly without the new node | Activate → trigger manually → inspect execution log |
+| [DATABASE TOOL] schema change | Read current table structure | Run a test query → confirm column/row returns correctly |
 | Website copy change | Confirm old string exists in the file | Confirm old string is absent + new string is present |
-| Environment variable | Read current value in Railway | Run a workflow that uses it → confirm it resolves |
-| Credential addition | Confirm credential type is correct in n8n | Run a test operation using the credential |
+| Environment variable | Read current value in [HOSTING PLATFORM] | Run a workflow that uses it → confirm it resolves |
+| Credential addition | Confirm credential type is correct in [ORCHESTRATION TOOL] | Run a test operation using the credential |
 
 **The post-change question to ask every time:**
 "Does the system behave exactly as expected with this change in place? If something went wrong right now, what is the rollback?"
@@ -116,7 +122,7 @@ This creates a history of every deliverable that is searchable by date and topic
 
 The core problem in AI-assisted development: session context compacts. When a conversation exceeds the context window, reasoning history is replaced with a summary. The summary captures *what* was done but loses *why*, *what was rejected*, and *what edge cases were noted*.
 
-**Sathia's three-layer protection:**
+**[PROJECT NAME]'s three-layer protection:**
 
 | Layer | Mechanism | Survives |
 |---|---|---|
@@ -132,24 +138,24 @@ The core problem in AI-assisted development: session context compacts. When a co
 
 | Gap | Reality |
 |---|---|
-| Visual regression | Claude cannot compare screenshots automatically. The human (Paul) must visually verify website changes in the browser |
-| Cross-browser testing | n8n and web app testing happens in one environment. Safari and iOS rendering must be checked manually |
-| Concurrent sessions | If Paul and Claude are both making changes simultaneously, the CHANGELOG may conflict. Resolution: prepend entries, preserve both |
-| Real-time monitoring | Claude cannot watch production metrics in real time. Betterstack handles this — Claude responds when Paul shares alert details |
+| Visual regression | Claude cannot compare screenshots automatically. The human ([OWNER]) must visually verify website changes in the browser |
+| Cross-browser testing | [ORCHESTRATION TOOL] and web app testing happens in one environment. Safari and iOS rendering must be checked manually |
+| Concurrent sessions | If [OWNER] and Claude are both making changes simultaneously, the CHANGELOG may conflict. Resolution: prepend entries, preserve both |
+| Real-time monitoring | Claude cannot watch production metrics in real time. [UPTIME MONITOR] handles this — Claude responds when [OWNER] shares alert details |
 
 ---
 
 ## Adapted Rules — What Was Left Behind
 
-The following rules from the original Manus playbook are Manus-specific and do not apply to Sathia:
+The following rules from the original Manus playbook are Manus-specific and do not apply to [PROJECT NAME]:
 
-| Original rule | Why not applicable | Sathia equivalent |
+| Original rule | Why not applicable | [PROJECT NAME] equivalent |
 |---|---|---|
-| `npx tsc --noEmit` | TypeScript compiler check | n8n test execution + Supabase query test |
+| `npx tsc --noEmit` | TypeScript compiler check | [ORCHESTRATION TOOL] test execution + [DATABASE TOOL] query test |
 | `webdev_save_checkpoint` | Manus-specific tool | Git commit with structured message |
-| `webdev_rollback_checkpoint` | Manus-specific tool | Git revert + n8n workflow rollback |
-| Screenshot review before checkpoint | Manus Management UI | Browser preview of site + n8n execution log |
+| `webdev_rollback_checkpoint` | Manus-specific tool | Git revert + [ORCHESTRATION TOOL] workflow rollback |
+| Screenshot review before checkpoint | Manus Management UI | Browser preview of site + [ORCHESTRATION TOOL] execution log |
 | Manus version history | Manus-specific | Git log + CHANGELOG.md |
 
 ---
-*Version 1.0 — Sathia | April 2026*
+*Version 1.0 — [PROJECT NAME] | April 2026*
