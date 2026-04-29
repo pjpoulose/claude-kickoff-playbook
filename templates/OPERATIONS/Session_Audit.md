@@ -1,6 +1,12 @@
+---
+> **TEMPLATE NOTE:** This file contains placeholders in [SQUARE BRACKETS].
+> Replace every placeholder with your project-specific values before use.
+> Search for [ to find all placeholders that need filling in.
+---
+
 # SESSION AUDIT — Start and End Checklists
 **Adapted from:** Continuous Process Audit and Self-Improvement Framework
-**Scope:** Every CoWork session that touches Sathia
+**Scope:** Every CoWork session that touches [PROJECT NAME]
 
 ---
 
@@ -21,11 +27,11 @@ Are there any items that were in-progress from a previous session that need to b
 
 | If working on | Run this check |
 |---|---|
-| n8n workflows | Claude Desktop: "List my active n8n workflows and confirm the instance is reachable" |
-| Supabase | Supabase Dashboard → check for any failed migrations or schema errors |
-| Website (sathia.ai) | Load sathia.ai in browser → confirm no broken sections visible |
-| Railway services | Railway Dashboard → confirm all services show green status |
-| Stripe billing | Stripe Dashboard → confirm no failed payment webhooks pending |
+| [ORCHESTRATION TOOL] workflows | Claude Desktop: "List my active [ORCHESTRATION TOOL] workflows and confirm the instance is reachable" |
+| [DATABASE TOOL] | [DATABASE TOOL] Dashboard → check for any failed migrations or schema errors |
+| Website ([project-domain.com]) | Load [project-domain.com] in browser → confirm no broken sections visible |
+| [HOSTING PLATFORM] services | [HOSTING PLATFORM] Dashboard → confirm all services show green status |
+| [PAYMENT PROCESSOR] billing | [PAYMENT PROCESSOR] Dashboard → confirm no failed payment webhooks pending |
 
 **5. Record the session baseline**
 Before starting work, note in CONTEXT/Current_Status.md or CHANGELOG.md:
@@ -99,17 +105,17 @@ If the answer requires more than reading the process documents, the documents ne
 
 ---
 
-## Sathia-Specific Health Metrics
+## [PROJECT NAME]-Specific Health Metrics
 
 | Metric | Definition | Target |
 |---|---|---|
 | CHANGELOG coverage | % of sessions with a corresponding CHANGELOG.md entry | 100% |
 | Verification completeness | % of changes with both pre and post verification | ≥ 95% |
-| n8n workflow stability | Number of workflow execution failures per 10 sessions | 0 |
+| [ORCHESTRATION TOOL] workflow stability | Number of workflow execution failures per 10 sessions | 0 |
 | Credential expiry rate | Number of expired OAuth tokens discovered unexpectedly | 0 |
 | Stale value rate | Number of old strings/values found in production after a change | 0 |
 | Debt backlog | Number of TODO.md items marked as debt items | 0 |
 | Regression rate | Number of user-reported regressions per release | 0 |
 
 ---
-*Version 1.0 — Sathia | April 2026*
+*Version 1.0 — [PROJECT NAME] | April 2026*
