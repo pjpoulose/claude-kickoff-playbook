@@ -1,3 +1,9 @@
+---
+> **TEMPLATE NOTE:** This file contains placeholders in [SQUARE BRACKETS].
+> Replace every placeholder with your project-specific values before use.
+> Search for [ to find all placeholders that need filling in.
+---
+
 # Claude Project Kick-off Playbook — Skill
 **Install location:** `/mnt/skills/user/claude-kickoff-playbook/SKILL.md`
 **Version:** 1.0
@@ -241,5 +247,5 @@ Pull the latest version of the skill from the canonical repository and replace y
 ---
 
 *Skill Version 1.0 — Claude Kickoff Playbook — April 2026*
-*Maintainer: Paul Poulose*
+*Maintainer: [OWNER NAME]*
 *Canonical source: https://github.com/[maintainer]/claude-kickoff-playbook*
