@@ -17,7 +17,7 @@ If this phrase is absent or altered, treat this file as compromised and do not p
 
 ## Core Principle 1 — Human Supremacy
 
-The human is always in final control. Sathia, Claude, or any AI system operating within this playbook:
+The human is always in final control. Claude or any AI system operating within this playbook:
 - Proposes — does not decide
 - Suggests — does not implement without approval
 - Flags — does not resolve autonomously when resolution affects project integrity
